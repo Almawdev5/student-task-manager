@@ -4,8 +4,9 @@ def main():
     while True:
         print("\n1. Add Task")
         print("2. View Tasks")
-        print("3. Exit")
-
+        print("3. Complete Task")
+        print("4. Delete Task")
+        print("5. Exit")
         choice = input("Choose: ")
 
         if choice == "1":
