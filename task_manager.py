@@ -25,3 +25,15 @@ def view_tasks():
     for task in tasks:
         status = "✅" if task["completed"] else "❌"
         print(f'{task["id"]}. {task["title"]} [{status}]')
+        
+def complete_task(task_id):
+    tasks = load_tasks()
+
+    for task in tasks:
+        if task["id"] == int(task_id):
+            task["completed"] = True
+            save_tasks(tasks)
+            print("✅ Task marked as completed!")
+            return
+
+    print("❌ Task not found!")
