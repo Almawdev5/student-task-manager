@@ -3,7 +3,7 @@ from task_manager import add_task, view_tasks,complete_task,delete_task
 def main():
     while True:
         print("\n1. Add Task")
-        print("2. View Tasks")
+        print("2.View All Tasks")
         print("3. Complete Task")
         print("4. Delete Task")
         print("5. Exit")
