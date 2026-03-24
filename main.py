@@ -1,11 +1,12 @@
-from task_manager import add_task, view_tasks,complete_task
+from task_manager import add_task, view_tasks,complete_task,delete_task
 
 def main():
     while True:
         print("\n1. Add Task")
         print("2. View Tasks")
         print("3. Complete Task")
-        print("4. Exit")
+        print("4. Delete Task")
+        print("5. Exit")
         choice = input("Choose: ")
 
         if choice == "1":
@@ -20,7 +21,11 @@ def main():
            complete_task(task_id)
 
         elif choice == "4":
-            break
+            task_id = input("Enter task ID to delete: ")
+            delete_task(task_id)
+
+        elif choice == "5":
+               break
 
 if __name__ == "__main__":
     main()

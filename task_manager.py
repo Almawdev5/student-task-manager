@@ -37,3 +37,14 @@ def complete_task(task_id):
             return
 
     print("❌ Task not found!")
+def delete_task(task_id):
+    tasks = load_tasks()
+
+    updated_tasks = [task for task in tasks if task["id"] != int(task_id)]
+
+    if len(tasks) == len(updated_tasks):
+        print("❌ Task not found!")
+        return
+
+    save_tasks(updated_tasks)
+    print("🗑️ Task deleted successfully!")
